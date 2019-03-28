@@ -1,6 +1,6 @@
 ﻿namespace Module2_Lab_InformDefend
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,13 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.inputPanel = new System.Windows.Forms.Panel();
+            this.outputPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // inputPanel
+            // 
+            this.inputPanel.Location = new System.Drawing.Point(129, 34);
+            this.inputPanel.Name = "inputPanel";
+            this.inputPanel.Size = new System.Drawing.Size(151, 151);
+            this.inputPanel.TabIndex = 0;
+            // 
+            // outputPanel
+            // 
+            this.outputPanel.Location = new System.Drawing.Point(129, 217);
+            this.outputPanel.Name = "outputPanel";
+            this.outputPanel.Size = new System.Drawing.Size(151, 148);
+            this.outputPanel.TabIndex = 1;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.outputPanel);
+            this.Controls.Add(this.inputPanel);
+            this.Name = "MainForm";
+            this.Text = "Нормализация графики";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel inputPanel;
+        private System.Windows.Forms.Panel outputPanel;
     }
 }
 
